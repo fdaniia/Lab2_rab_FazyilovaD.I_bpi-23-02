@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,7 +70,13 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     double k = Convert.ToDouble(R5ComboK.Text);
                     this.Title = "ответ: " + x.ToString("F")
                 }
+                else { MessageBox.Show("выберите формулу"); }
             }
+            catch (Exception ex) { MessageBox.Show("ошибка {ex.Message}"); }
         }
     }
+    private double ParseDouble(string text)
+        {
+            return double.Parse(text.Replace(',', '.'), CultureInfo.InvariantCulture);
+        }
 }

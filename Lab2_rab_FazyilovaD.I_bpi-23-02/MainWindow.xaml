@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2_rab_FazyilovaD.I_bpi_23_02"
         mc:Ignorable="d"
-        Title="ответ:" Height="420" Width="480" WindowStartupLocation="CenterScreen" SizeToContent="Height">
+        Title="ответ:" Height="500" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height">
     <StackPanel>
         <RadioButton IsChecked="True" Margin="5" Name="Radio1">
             <WrapPanel >
-                <Image Source="" Height="100" />
+                <Image Source="1.png" Height="100" />
                 <GroupBox Header="Parametres" >
                     <Grid>
                         <Grid.RowDefinitions>
@@ -37,7 +37,7 @@
         </RadioButton>
         <RadioButton Margin="5" Name="Radio2" >
             <StackPanel >
-                <Image Height="23" Source="" />
+                <Image Height="23" Source="2.png" />
                 <GroupBox Header="Parameters" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="a" />
@@ -57,7 +57,7 @@
         </RadioButton>
         <RadioButton Margin="5" Name="Radio3">
             <StackPanel >
-                <Image Source="" Height="30" />
+                <Image Source="3.png" Height="30" />
                 <GroupBox Header="Parameters" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="a" />
@@ -81,7 +81,7 @@
         </RadioButton>
         <RadioButton Margin="5" Name="Radio4">
             <WrapPanel >
-                <Image Source="" Height="60"/>
+                <Image Source="4.png" Height="60"/>
                 <Label Content="c" VerticalAlignment="Center"/>
                 <ComboBox MinWidth="70" VerticalAlignment="Center" Name="R4ComboC" SelectedIndex="0" >
                     <ComboBoxItem Content="0"/>
@@ -96,7 +96,7 @@
         </RadioButton>        
         <RadioButton Margin="5" Name="Radio5" >
             <StackPanel>
-                <Image Source="" Height="40"/>
+                <Image Source="5.png" Height="40"/>
                 <GroupBox Header="параметры">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="x" />
