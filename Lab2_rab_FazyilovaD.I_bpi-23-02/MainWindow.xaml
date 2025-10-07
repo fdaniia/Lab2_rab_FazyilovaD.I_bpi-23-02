@@ -93,6 +93,35 @@
                 <Label Content="a" VerticalAlignment="Center" />
                 <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextA" />
             </WrapPanel>
+        </RadioButton>        
+        <RadioButton Margin="5" Name="Radio5" >
+            <StackPanel>
+                <Image Source="" Height="40"/>
+                <GroupBox Header="параметры">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="x" />
+                    <TextBox Text="0,00" MinWidth="60" Name="R5TextX"/>
+                    <Label Content="y"/>
+                    <TextBox Text="0,00" MinWidth="60" Name="R5TextY" />
+                    <Label Content="N" />
+                    <ComboBox MinWidth="50" Name="R5ComboN">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="K" />
+                    <ComboBox MinWidth="50" Name="R5ComboK">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                </GroupBox>
+            </StackPanel>
         </RadioButton>
         <Button Content="считать" Width="100" Click="Calc_Click" />
     </StackPanel>
