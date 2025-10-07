@@ -20,8 +20,8 @@
                             <ColumnDefinition/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
-                        <Label Content="a" Grid.Column="0" Grid.Row="0" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
-                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R1TextA"/>
+                        <Label Content="a" Grid.Column="0" Grid.Row="0" />
+                        <TextBox Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R1TextA" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
                         <Label Content="f" Grid.Column="0" Grid.Row="1" />
                         <ComboBox Grid.Column="1" Grid.Row="1" SelectedIndex="0" Name="R1ComboF" >
                             <ComboBoxItem>4</ComboBoxItem>
