@@ -25,7 +25,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         {
             InitializeComponent();
         }
-        private void Calc_Click (object sender, RoutedEventArgs e)
+        private void Calc_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     double f = Convert.ToDouble(R2ComboF.Text);
                     this.Title = "ответ: " + (Math.Cos(f * a) + Math.Sin(f * b)).ToString("F");
                 }
-               else if (Radio3.IsChecked == true)
+                else if (Radio3.IsChecked == true)
                 {
                     double a = Convert.ToDouble(R3TextA.Text);
                     double b = Convert.ToDouble(R3TextB.Text);
@@ -79,4 +79,4 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         {
             return double.Parse(text.Replace(',', '.'), CultureInfo.InvariantCulture);
         }
-}
+    } }
