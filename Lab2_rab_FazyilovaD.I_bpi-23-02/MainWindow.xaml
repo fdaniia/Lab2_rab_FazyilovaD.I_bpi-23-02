@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2_rab_FazyilovaD.I_bpi_23_02"
         mc:Ignorable="d"
-        Title="ответ:" Height="500" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height">
+        Title="ответ:" Height="600" Width="600" WindowStartupLocation="CenterScreen" SizeToContent="Height">
     <StackPanel>
         <RadioButton IsChecked="True" Margin="5" Name="Radio1">
             <WrapPanel >
@@ -97,7 +97,7 @@
         <RadioButton Margin="5" Name="Radio5" >
             <StackPanel>
                 <Image Source="5.png" Height="40"/>
-                <GroupBox Header="параметры">
+                <GroupBox Header="parameters">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="x" />
                     <TextBox Text="0,00" MinWidth="60" Name="R5TextX"/>
