@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2_rab_FazyilovaD.I_bpi_23_02"
         mc:Ignorable="d"
-        Title="ответ:" Height="600" Width="600" WindowStartupLocation="CenterScreen" SizeToContent="Height">
+        Title="ответ:" Height="650" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height">
     <StackPanel>
         <RadioButton Margin="5" Name="Radio1">
             <WrapPanel >
@@ -82,16 +82,20 @@
         <RadioButton Margin="5" Name="Radio4">
             <WrapPanel >
                 <Image Source="/Image/4.png" Height="60"/>
-                <Label Content="c" VerticalAlignment="Center"/>
-                <ComboBox MinWidth="70" VerticalAlignment="Center" Name="R4ComboC" SelectedIndex="0" >
-                    <ComboBoxItem Content="0"/>
-                    <ComboBoxItem Content="1"/>
-                    <ComboBoxItem Content="2"/>
-                </ComboBox>
-                <Label Content="d" VerticalAlignment="Center" />
-                <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextD" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting" />
-                <Label Content="a" VerticalAlignment="Center" />
-                <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextA" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
+                <GroupBox Header="Parameters" >
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="c" VerticalAlignment="Center"/>
+                        <ComboBox MinWidth="70" VerticalAlignment="Center" Name="R4ComboC" SelectedIndex="0" >
+                            <ComboBoxItem Content="0"/>
+                            <ComboBoxItem Content="1"/>
+                            <ComboBoxItem Content="2"/>
+                        </ComboBox>
+                        <Label Content="d" VerticalAlignment="Center" />
+                        <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextD" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting" />
+                        <Label Content="a" VerticalAlignment="Center" />
+                        <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextA" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
+                    </StackPanel>
+                </GroupBox>
             </WrapPanel>
         </RadioButton>        
         <RadioButton Margin="5" Name="Radio5" >
