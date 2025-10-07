@@ -60,7 +60,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     };
                     result = func.Calculate();
                 }
-                else if (Radio4.IsChecked = true)
+                else if (Radio4.IsChecked == true)
                 {
                     var func = new Function4
                     {
@@ -84,7 +84,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 else { MessageBox.Show("выберите формулу"); return; }
                 this.Title = "ответ:" + result.ToString("F4");
             }
-            catch (Exception ex) { MessageBox.Show("ошибка {ex.Message}"); }
+            catch (Exception ex) { MessageBox.Show($"ошибка: {ex.Message}"); }
         }
         private double ParseDouble(string text)
         {

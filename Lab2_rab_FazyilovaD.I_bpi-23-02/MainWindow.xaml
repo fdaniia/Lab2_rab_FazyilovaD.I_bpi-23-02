@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ответ:" Height="600" Width="600" WindowStartupLocation="CenterScreen" SizeToContent="Height">
     <StackPanel>
-        <RadioButton IsChecked="True" Margin="5" Name="Radio1">
+        <RadioButton Margin="5" Name="Radio1">
             <WrapPanel >
                 <Image Source="1.png" Height="100" />
                 <GroupBox Header="Parametres" >
