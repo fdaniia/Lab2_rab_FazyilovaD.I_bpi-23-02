@@ -90,5 +90,72 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         {
             return double.Parse(text.Replace(',', '.'), CultureInfo.InvariantCulture);
         }
+        private void UniversalTextBox_PreviewCheck(object sender, TextCompositionEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            string newText = textBox.Text.Insert(textBox.SelectionStart, e.Text);
+
+            // Разрешаем только цифры, запятую, точку и минус
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c) && c != ',' && c != '.' && c != '-')
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            // Проверяем, чтобы минус был только в начале
+            if (e.Text.Contains("-"))
+            {
+                if (textBox.SelectionStart != 0 || textBox.Text.Contains("-"))
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+
+            // Проверяем, чтобы запятая или точка была только одна
+            if (e.Text == "," || e.Text == ".")
+            {
+                if (textBox.Text.Contains(",") || textBox.Text.Contains("."))
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+        }
+
+        // Обработчик для вставки текста
+        private void UniversalTextBox_Pasting(object sender, DataObjectPastingEventArgs e)
+        {
+            if (e.DataObject.GetDataPresent(typeof(string)))
+            {
+                string text = (string)e.DataObject.GetData(typeof(string));
+                if (!IsValidText(text))
+                {
+                    e.CancelCommand();
+                }
+            }
+            else
+            {
+                e.CancelCommand();
+            }
+        }
+        private bool IsValidText(string text)
+        {
+            foreach (char c in text)
+            {
+                if (!char.IsDigit(c) && c != ',' && c != '.' && c != '-') return false;                
+            }
+            if (text.Contains("-"))
+            {
+                if (text.IndexOf('-') > 0) return false;
+            }
+            int commaCount = text.Count(c => c == ',');
+            int dotCount = text.Count(c => c == '.');
+            if (commaCount > 1 || dotCount > 1 || (commaCount == 1 && dotCount == 1)) return false;            
+            return true;
+        }
     }
 }
