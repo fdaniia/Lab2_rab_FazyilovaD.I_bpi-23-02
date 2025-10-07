@@ -26,38 +26,49 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         }
         private void Calc_Click (object sender, RoutedEventArgs e)
         {
-            if (Radio1.IsChecked.GetValueOrDefault())
+            try
             {
-                double a = Convert.ToDouble(R1TextA.Text);
-                double f = Convert.ToDouble(R1ComboF.Text);
-                this.Title = "ответ: " + Math.Sin(f * a).ToString("F");
-            }
-            if (Radio2.IsChecked.GetValueOrDefault())
-            {
-                double a = Convert.ToDouble(R2TextA.Text);
-                double b = Convert.ToDouble(R2TextB.Text);
-                double f = Convert.ToDouble(R2ComboF.Text);
-                this.Title = "ответ: " + (Math.Cos(f * a) + Math.Sin(f * b)).ToString("F");
-            }
-            if (Radio3.IsChecked.GetValueOrDefault())
-            {
-                double a = Convert.ToDouble(R3TextA.Text);
-                double b = Convert.ToDouble(R3TextB.Text);
-                double c = Convert.ToDouble(R3ComboC.Text);
-                double d = Convert.ToDouble(R3ComboD.Text);
-                this.Title = "ответ: " + (c * a * a + d * b * b).ToString("F");
-            }
-            if (Radio4.IsChecked.GetValueOrDefault())
-            {
-                double a = Convert.ToDouble(R4TextA.Text);
-                double d = Convert.ToDouble(R4TextD.Text);
-                double c = Convert.ToDouble(R4ComboC.Text);
-                double res = 1;
-                for (int i = 0; i < d; i++)
+                if (Radio1.IsChecked == true)
                 {
-                    res = res * (c + a) + 1;
+                    double a = Convert.ToDouble(R1TextA.Text);
+                    double f = Convert.ToDouble(R1ComboF.Text);
+                    this.Title = "ответ: " + Math.Sin(f * a).ToString("F");
                 }
-                this.Title = "ответ: " + res.ToString("F");
+                else if (Radio2.IsChecked == true)
+                {
+                    double a = Convert.ToDouble(R2TextA.Text);
+                    double b = Convert.ToDouble(R2TextB.Text);
+                    double f = Convert.ToDouble(R2ComboF.Text);
+                    this.Title = "ответ: " + (Math.Cos(f * a) + Math.Sin(f * b)).ToString("F");
+                }
+               else if (Radio3.IsChecked == true)
+                {
+                    double a = Convert.ToDouble(R3TextA.Text);
+                    double b = Convert.ToDouble(R3TextB.Text);
+                    double c = Convert.ToDouble(R3ComboC.Text);
+                    double d = Convert.ToDouble(R3ComboD.Text);
+                    this.Title = "ответ: " + (c * a * a + d * b * b).ToString("F");
+                }
+                else if (Radio4.IsChecked = true)
+                {
+                    double a = Convert.ToDouble(R4TextA.Text);
+                    double d = Convert.ToDouble(R4TextD.Text);
+                    double c = Convert.ToDouble(R4ComboC.Text);
+                    double res = 1;
+                    for (int i = 0; i < d; i++)
+                    {
+                        res = res * (c + a) + 1;
+                    }
+                    this.Title = "ответ: " + res.ToString("F");
+                }
+                else if (Radio5.IsChecked == true)
+                {
+                    double x = Convert.ToDouble(R5TextX.Text);
+                    double y = Convert.ToDouble(R5TextY.Text);
+                    double n = Convert.ToDouble(R5ComboN.Text);
+                    double k = Convert.ToDouble(R5ComboK.Text);
+                    this.Title = "ответ: " + x.ToString("F")
+                }
             }
         }
     }
