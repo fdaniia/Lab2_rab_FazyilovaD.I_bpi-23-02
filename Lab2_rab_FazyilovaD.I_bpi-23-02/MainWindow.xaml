@@ -91,7 +91,7 @@
                             <ComboBoxItem Content="2"/>
                         </ComboBox>
                         <Label Content="d" VerticalAlignment="Center" />
-                        <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextD" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting" ToolTip="введите целое число"/>
+                        <TextBox Text="0" Width="70" VerticalAlignment="Center" Name="R4TextD" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting" ToolTip="введите целое число"/>
                         <Label Content="a" VerticalAlignment="Center" />
                         <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="R4TextA" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
                     </StackPanel>
