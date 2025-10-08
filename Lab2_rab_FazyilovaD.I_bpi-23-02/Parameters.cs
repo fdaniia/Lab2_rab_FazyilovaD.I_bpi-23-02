@@ -12,10 +12,10 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         public double F { get; set; }
         public double B { get; set; }
         public double C { get; set; }
-        public double D { get; set; }
+        public int D { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
-        public double N { get; set; }
-        public double K { get; set; }
+        public int N { get; set; }
+        public int K { get; set; }
     }
 }

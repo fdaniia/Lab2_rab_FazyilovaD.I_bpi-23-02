@@ -59,7 +59,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                         A = ParseDouble(R3TextA.Text),
                         B = ParseDouble(R3TextB.Text),
                         C = ParseDouble(((ComboBoxItem)R3ComboC.SelectedItem).Content.ToString()),
-                        D = ParseDouble(((ComboBoxItem)R3ComboD.SelectedItem).Content.ToString())
+                        D = ParseInt(((ComboBoxItem)R3ComboD.SelectedItem).Content.ToString())
                     };
                     result = func.Calculate(parameters);
                 }
@@ -69,7 +69,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     var parameters = new Parameters
                     {
                         A = ParseDouble(R4TextA.Text),
-                        D = ParseDouble(R4TextD.Text),
+                        D = ParseInt(R4TextD.Text),
                         C = ParseDouble(((ComboBoxItem)R4ComboC.SelectedItem).Content.ToString())
                     };
                     result = func.Calculate(parameters);
@@ -81,19 +81,23 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     {
                         X = ParseDouble(R5TextX.Text),
                         Y = ParseDouble(R5TextY.Text),
-                        N = ParseDouble(R5ComboN.Text),
-                        K = ParseDouble(R5ComboK.Text)
+                        N = ParseInt(R5ComboN.Text),
+                        K = ParseInt(R5ComboK.Text)
                     };
                     result = func.Calculate(parameters);
                 }
                 else { MessageBox.Show("выберите формулу"); return; }
-                this.Title = "ответ:" + result.ToString("F4");
+                this.Title = "ответ: " + result.ToString("F4");
             }
             catch (Exception ex) { MessageBox.Show($"ошибка: {ex.Message}"); }
         }
         private double ParseDouble(string text)
         {
             return double.Parse(text.Replace(',', '.'), CultureInfo.InvariantCulture);
+        }
+        private int ParseInt(string text)
+        {
+            return int.Parse(text, CultureInfo.InvariantCulture);
         }
         private void UniversalTextBox_PreviewCheck(object sender, TextCompositionEventArgs e)
         {
