@@ -32,54 +32,59 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 double result = 0;
                 if (Radio1.IsChecked == true)
                 {
-                    var func = new Function1
+                    var func = new Function1();
+                    var parameters = new Parameters
                     {
                         A = ParseDouble(R1TextA.Text),
                         F = ParseDouble(R1ComboF.Text)
                     };
-                    result = func.Calculate();
+                    result = func.Calculate(parameters);
                 }
                 else if (Radio2.IsChecked == true)
                 {
-                    var func = new Function2
+                    var func = new Function2();
+                    var parameters = new Parameters
                     {
                         A = ParseDouble(R2TextA.Text),
                         B = ParseDouble(R2TextB.Text),
                         F = ParseDouble(R2ComboF.Text)
                     };
-                    result = func.Calculate();
+                    result = func.Calculate(parameters);
                 }
                 else if (Radio3.IsChecked == true)
                 {
-                    var func = new Function3
+                    var func = new Function3();
+                    var parameters = new Parameters
                     {
                         A = ParseDouble(R3TextA.Text),
                         B = ParseDouble(R3TextB.Text),
                         C = ParseDouble(((ComboBoxItem)R3ComboC.SelectedItem).Content.ToString()),
                         D = ParseDouble(((ComboBoxItem)R3ComboD.SelectedItem).Content.ToString())
                     };
-                    result = func.Calculate();
+                    result = func.Calculate(parameters);
                 }
                 else if (Radio4.IsChecked == true)
                 {
-                    var func = new Function4
+                    var func = new Function4();
+                    var parameters = new Parameters
                     {
                         A = ParseDouble(R4TextA.Text),
                         D = ParseDouble(R4TextD.Text),
                         C = ParseDouble(((ComboBoxItem)R4ComboC.SelectedItem).Content.ToString())
                     };
-                    result = func.Calculate();
+                    result = func.Calculate(parameters);
                 }
                 else if (Radio5.IsChecked == true)
                 {
-                    var func = new Function5
+                    var func = new Function5();
+                    var parameters = new Parameters
                     {
                         X = ParseDouble(R5TextX.Text),
                         Y = ParseDouble(R5TextY.Text),
                         N = ParseDouble(R5ComboN.Text),
                         K = ParseDouble(R5ComboK.Text)
                     };
-                    result = func.Calculate();
+                    result = func.Calculate(parameters);
                 }
                 else { MessageBox.Show("выберите формулу"); return; }
                 this.Title = "ответ:" + result.ToString("F4");
@@ -94,8 +99,6 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         {
             var textBox = sender as TextBox;
             string newText = textBox.Text.Insert(textBox.SelectionStart, e.Text);
-
-            // Разрешаем только цифры, запятую, точку и минус
             foreach (char c in e.Text)
             {
                 if (!char.IsDigit(c) && c != ',' && c != '.' && c != '-')
@@ -104,8 +107,6 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     return;
                 }
             }
-
-            // Проверяем, чтобы минус был только в начале
             if (e.Text.Contains("-"))
             {
                 if (textBox.SelectionStart != 0 || textBox.Text.Contains("-"))
@@ -114,8 +115,6 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     return;
                 }
             }
-
-            // Проверяем, чтобы запятая или точка была только одна
             if (e.Text == "," || e.Text == ".")
             {
                 if (textBox.Text.Contains(",") || textBox.Text.Contains("."))
@@ -125,17 +124,12 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 }
             }
         }
-
-        // Обработчик для вставки текста
         private void UniversalTextBox_Pasting(object sender, DataObjectPastingEventArgs e)
         {
             if (e.DataObject.GetDataPresent(typeof(string)))
             {
                 string text = (string)e.DataObject.GetData(typeof(string));
-                if (!IsValidText(text))
-                {
-                    e.CancelCommand();
-                }
+                if (!IsValidText(text)) e.CancelCommand();
             }
             else
             {

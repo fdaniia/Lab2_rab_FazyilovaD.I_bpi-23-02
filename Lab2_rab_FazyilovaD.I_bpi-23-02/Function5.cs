@@ -8,19 +8,15 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
 {
     public class Function5 : Base
     {
-        public double X { get; set; }
-        public double Y { get; set; }
-        public double N { get; set; }
-        public double K { get; set; }
         public Function5() { ImagePath = "5.png"; }
-        public override double Calculate()
+        public override double Calculate(Parameters parameters)
         {
             double sum = 0;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= parameters.N; i++)
             {
-                for (int j = 1; j <= K; j++)
+                for (int j = 1; j <= parameters.K; j++)
                 {
-                    sum += (Math.Cos(Math.Pow(Y, i)) + j * X) / (i * j);
+                    sum += (Math.Cos(Math.Pow(parameters.Y, i)) + j * parameters.X) / (i * j);
                 }
             }
             return sum;

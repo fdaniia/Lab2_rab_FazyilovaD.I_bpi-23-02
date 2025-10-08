@@ -8,13 +8,10 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
 {
     public class Function2 : Base
     {
-        public double A { get; set; }
-        public double B { get; set; }
-        public double F { get; set; }
         public Function2() { ImagePath = "2.png"; }
-        public override double Calculate()
+        public override double Calculate(Parameters parameters)
         {
-            return Math.Cos(F * A) + Math.Sin(F * B);
+            return Math.Cos(parameters.F * parameters.A) + Math.Sin(parameters.F * parameters.B);
         }
     }
 }

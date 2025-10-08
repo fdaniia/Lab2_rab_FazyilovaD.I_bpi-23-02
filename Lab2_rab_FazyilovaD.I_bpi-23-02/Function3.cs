@@ -8,14 +8,10 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
 {
     public class Function3 : Base
     {
-        public double A { get; set; }
-        public double B { get; set; }
-        public double C { get; set; }
-        public double D { get; set; }
         public Function3() { ImagePath = "3.png"; }
-        public override double Calculate()
+        public override double Calculate(Parameters parameters)
         {
-            return C * A * A + D * B * B;
+            return parameters.C * parameters.A * parameters.A + parameters.D *parameters.B * parameters.B;
         }
     }
 }

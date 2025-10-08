@@ -100,7 +100,7 @@
         </RadioButton>        
         <RadioButton Margin="5" Name="Radio5" >
             <StackPanel>
-                <Image Source="/Image/5.png" Height="40"/>
+                <Image Source="/Image/5.png" Height="50"/>
                 <GroupBox Header="parameters">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="x" />
