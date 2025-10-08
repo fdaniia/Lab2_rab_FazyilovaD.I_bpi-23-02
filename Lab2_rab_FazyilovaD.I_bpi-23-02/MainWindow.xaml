@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2_rab_FazyilovaD.I_bpi_23_02"
         mc:Ignorable="d"
-        Title="ответ:" Height="650" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height">
+        Title="ответ:" Height="600" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height" MinHeight="650" MinWidth="400">
     <StackPanel>
         <RadioButton Margin="5" Name="Radio1">
             <WrapPanel >
