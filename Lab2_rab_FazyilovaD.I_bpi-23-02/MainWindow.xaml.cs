@@ -33,58 +33,43 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 if (Radio1.IsChecked == true)
                 {
                     var func = new Function1();
-                    var parameters = new Parameters
-                    {
-                        A = ParseDouble(R1TextA.Text),
-                        F = ParseDouble(R1ComboF.Text)
-                    };
-                    result = func.Calculate(parameters);
+                    func.A = ParseDouble(R1TextA.Text);
+                    func.F = ParseDouble(R1ComboF.Text);
+                    result = func.Calculate();
                 }
                 else if (Radio2.IsChecked == true)
                 {
                     var func = new Function2();
-                    var parameters = new Parameters
-                    {
-                        A = ParseDouble(R2TextA.Text),
-                        B = ParseDouble(R2TextB.Text),
-                        F = ParseDouble(R2ComboF.Text)
-                    };
-                    result = func.Calculate(parameters);
+                    func.A = ParseDouble(R2TextA.Text);
+                    func.B = ParseDouble(R2TextB.Text);
+                    func.F = ParseDouble(R2ComboF.Text);
+                    result = func.Calculate();
                 }
                 else if (Radio3.IsChecked == true)
                 {
                     var func = new Function3();
-                    var parameters = new Parameters
-                    {
-                        A = ParseDouble(R3TextA.Text),
-                        B = ParseDouble(R3TextB.Text),
-                        C = ParseDouble(((ComboBoxItem)R3ComboC.SelectedItem).Content.ToString()),
-                        D = ParseInt(((ComboBoxItem)R3ComboD.SelectedItem).Content.ToString())
-                    };
-                    result = func.Calculate(parameters);
+                    func.A = ParseDouble(R3TextA.Text);
+                    func.B = ParseDouble(R3TextB.Text);
+                    func.C = ParseDouble(((ComboBoxItem)R3ComboC.SelectedItem).Content.ToString());
+                    func.D = ParseInt(((ComboBoxItem)R3ComboD.SelectedItem).Content.ToString());
+                    result = func.Calculate();
                 }
                 else if (Radio4.IsChecked == true)
                 {
                     var func = new Function4();
-                    var parameters = new Parameters
-                    {
-                        A = ParseDouble(R4TextA.Text),
-                        D = ParseInt(R4TextD.Text),
-                        C = ParseDouble(((ComboBoxItem)R4ComboC.SelectedItem).Content.ToString())
-                    };
-                    result = func.Calculate(parameters);
+                    func.A = ParseDouble(R4TextA.Text);
+                    func.D = ParseInt(R4TextD.Text);
+                    func.C = ParseDouble(((ComboBoxItem)R4ComboC.SelectedItem).Content.ToString());
+                    result = func.Calculate();
                 }
                 else if (Radio5.IsChecked == true)
                 {
                     var func = new Function5();
-                    var parameters = new Parameters
-                    {
-                        X = ParseDouble(R5TextX.Text),
-                        Y = ParseDouble(R5TextY.Text),
-                        N = ParseInt(R5TextN.Text),
-                        K = ParseInt(R5TextK.Text)
-                    };
-                    result = func.Calculate(parameters);
+                    func.X = ParseDouble(R5TextX.Text);
+                    func.Y = ParseDouble(R5TextY.Text);
+                    func.N = ParseInt(R5TextN.Text);
+                    func.K = ParseInt(R5TextK.Text);
+                    result = func.Calculate();
                 }
                 else { MessageBox.Show("выберите формулу"); return; }
                 this.Title = "ответ: " + result.ToString("F4");
