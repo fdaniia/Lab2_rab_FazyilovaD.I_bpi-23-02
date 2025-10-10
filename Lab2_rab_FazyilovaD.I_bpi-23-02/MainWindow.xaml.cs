@@ -81,8 +81,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     {
                         X = ParseDouble(R5TextX.Text),
                         Y = ParseDouble(R5TextY.Text),
-                        N = ParseInt(R5ComboN.Text),
-                        K = ParseInt(R5ComboK.Text)
+                        N = ParseInt(R5TextN.Text),
+                        K = ParseInt(R5TextK.Text)
                     };
                     result = func.Calculate(parameters);
                 }

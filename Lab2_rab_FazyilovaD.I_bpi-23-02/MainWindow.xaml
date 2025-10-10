@@ -108,21 +108,10 @@
                     <Label Content="y"/>
                         <TextBox Text="0,00" MinWidth="60" Name="R5TextY" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
                     <Label Content="N" />
-                    <ComboBox MinWidth="50" Name="R5ComboN">
-                        <ComboBoxItem>1</ComboBoxItem>
-                        <ComboBoxItem>2</ComboBoxItem>
-                        <ComboBoxItem>3</ComboBoxItem>
-                        <ComboBoxItem>4</ComboBoxItem>
-                        <ComboBoxItem>5</ComboBoxItem>
-                    </ComboBox>
-                    <Label Content="K" />
-                    <ComboBox MinWidth="50" Name="R5ComboK">
-                        <ComboBoxItem>1</ComboBoxItem>
-                        <ComboBoxItem>2</ComboBoxItem>
-                        <ComboBoxItem>3</ComboBoxItem>
-                        <ComboBoxItem>4</ComboBoxItem>
-                        <ComboBoxItem>5</ComboBoxItem>
-                    </ComboBox>
+                        <TextBox Text="0" Width="70" VerticalAlignment="Center" Name="R5TextN" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting" ToolTip="введите целое число"/>
+                        <Label Content="K" />
+                        <TextBox Text="0" Width="70" VerticalAlignment="Center" Name="R5TextK" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting" ToolTip="введите целое число"/>
+                        
                 </StackPanel>
                 </GroupBox>
             </StackPanel>
