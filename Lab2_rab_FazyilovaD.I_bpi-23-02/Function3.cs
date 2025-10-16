@@ -9,7 +9,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
     public class Function3 : Base
     {
         public double A { get; set; }
-        public double C { get; set; }
+        public int C { get; set; }
         public int D { get; set; }
         public double B { get; set; }
         public Function3() { ImagePath = "3.png"; }

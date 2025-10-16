@@ -24,6 +24,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         public MainWindow()
         {
             InitializeComponent();
+            ApplyLightTheme();
         }
         private void Calc_Click(object sender, RoutedEventArgs e)
         {
@@ -50,7 +51,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                     var func = new Function3();
                     func.A = ParseDouble(R3TextA.Text);
                     func.B = ParseDouble(R3TextB.Text);
-                    func.C = ParseDouble(((ComboBoxItem)R3ComboC.SelectedItem).Content.ToString());
+                    func.C = ParseInt(((ComboBoxItem)R3ComboC.SelectedItem).Content.ToString());
                     func.D = ParseInt(((ComboBoxItem)R3ComboD.SelectedItem).Content.ToString());
                     result = func.Calculate();
                 }
@@ -139,6 +140,29 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             int dotCount = text.Count(c => c == '.');
             if (commaCount > 1 || dotCount > 1 || (commaCount == 1 && dotCount == 1)) return false;            
             return true;
+        }
+        private void ApplyLightTheme()
+        {
+            Resources.MergedDictionaries.Clear();
+            var lightTheme = new ResourceDictionary();
+            lightTheme.Source = new Uri("Light.xaml", UriKind.Relative);
+            Resources.MergedDictionaries.Add(lightTheme);
+        }
+        private void ApplyDarkTheme()
+        {
+            Resources.MergedDictionaries.Clear();
+            var darkTheme = new ResourceDictionary();
+            darkTheme.Source = new Uri("Dark.xaml", UriKind.Relative);
+            Resources.MergedDictionaries.Add(darkTheme);
+        }
+        private void LightTheme_Click(object sender, RoutedEventArgs e)
+        {
+            ApplyLightTheme();
+        }
+
+        private void DarkTheme_Click(object sender, RoutedEventArgs e)
+        {
+            ApplyDarkTheme();
         }
     }
 }

@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="ответ:" Height="600" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height" MinHeight="650" MinWidth="400">
     <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Background="Transparent" >
+            <Button Content="Светлая тема" Click="LightTheme_Click" Margin="5"/>
+            <Button Content="Темная тема" Click="DarkTheme_Click" Margin="5"/>
+        </StackPanel>
         <RadioButton Margin="5" Name="Radio1">
             <WrapPanel >
                 <Image Source="/Image/1.png" Height="100" />
