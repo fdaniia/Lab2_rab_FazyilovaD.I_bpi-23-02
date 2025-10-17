@@ -22,15 +22,9 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
     public partial class MainWindow : Window
     {
         private bool isDarkTheme = false;
-        private Color lightComboBoxColor = Colors.PaleGreen;
-        private Color darkComboBoxColor = Colors.DarkBlue;
-        private Color lightComboBoxHoverColor = Colors.DarkGreen;
-        private Color darkComboBoxHoverColor = Colors.Indigo;
         public MainWindow()
         {
             InitializeComponent();
-            this.Resources["ComboBoxBackgroundColor"] = lightComboBoxColor;
-            this.Resources["ComboBoxHoverColor"] = lightComboBoxHoverColor;
             ApplyLightTheme();
         }
         private void Calc_Click(object sender, RoutedEventArgs e)
@@ -160,25 +154,9 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-            this.Resources["ComboBoxBackgroundColor"] = Color.FromRgb(0xFF, 0x82, 0x43); 
-            this.Resources["ComboBoxHoverColor"] = Color.FromRgb(0xC0, 0x40, 0x00);
             ThemeToggleButton.ClearValue(Button.BackgroundProperty);
             ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["LightButtonStyle"] as Style;
-            var computeButton = this.FindName("computeButton") as Button;
-            if (computeButton != null)
-            {
-                computeButton.ClearValue(Button.BackgroundProperty);
-                computeButton.ClearValue(Button.StyleProperty);
-                computeButton.Style = resourceDict["LightButtonStyle"] as Style;
-            }
-            var comboBoxStyle = resourceDict["LightComboBoxStyle"] as Style;
-            var comboBoxItemStyle = resourceDict["LightComboBoxItemStyle"] as Style;
-            if (TrigFun != null)
-            {
-                TrigFun.Style = comboBoxStyle;
-                TrigFun.ItemContainerStyle = comboBoxItemStyle;
-            }
             this.Tag = "Light";
             ThemeToggleButton.Content = "темная тема";
         }
@@ -188,25 +166,9 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-            this.Resources["ComboBoxBackgroundColor"] = Color.FromRgb(0x96, 0x6F, 0xD6); 
-            this.Resources["ComboBoxHoverColor"] = Color.FromRgb(0x00, 0x33, 0x66);
             ThemeToggleButton.ClearValue(Button.BackgroundProperty);
             ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["DarkButtonStyle"] as Style;
-            var computeButton = this.FindName("computeButton") as Button;
-            if (computeButton != null)
-            {
-                computeButton.ClearValue(Button.BackgroundProperty);
-                computeButton.ClearValue(Button.StyleProperty);
-                computeButton.Style = resourceDict["DarkButtonStyle"] as Style;
-            }
-            var comboBoxStyle = resourceDict["DarkComboBoxStyle"] as Style;
-            var comboBoxItemStyle = resourceDict["DarkComboBoxItemStyle"] as Style;
-            if (TrigFun != null)
-            {
-                TrigFun.Style = comboBoxStyle;
-                TrigFun.ItemContainerStyle = comboBoxItemStyle;
-            }
             this.Tag = "Dark";
             ThemeToggleButton.Content = "светлая тема";
         }

@@ -52,6 +52,20 @@
         <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Border" Color="LightGray"/>
         <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Button.Background" Color="LightGray"/>
         <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Button.Border" Color="LightGray"/>
+        <Style x:Key="TextBoxStyle1" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+        <Style x:Key="ComboBoxStyle1" TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="{StaticResource ComboBoxBackgroundColor}"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="{StaticResource ComboBoxBackgroundColor}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="2"/>
+        </Style>
         <Style x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
             <Setter Property="OverridesDefaultStyle" Value="true"/>
             <Setter Property="IsTabStop" Value="false"/>
