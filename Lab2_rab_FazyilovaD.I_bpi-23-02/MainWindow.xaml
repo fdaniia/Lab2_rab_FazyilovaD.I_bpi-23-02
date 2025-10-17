@@ -8,11 +8,8 @@
         Title="ответ:" Height="600" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height" x:Name="mainWindow"
         MinHeight="650" MinWidth="400" xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
-        <Color x:Key="ComboBoxBackgroundColor">PaleGreen</Color>
-        <Color x:Key="ComboBoxHoverColor">DarkGreen</Color>
-
-        <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHoverFocus.Background" Color="{DynamicResource ComboBoxHoverColor}"/>
-        <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelected.Background" Color="{DynamicResource ComboBoxHoverColor}"/>
+        <Color x:Key="ComboBoxBackgroundColorValue">PaleGreen</Color>
+        <Color x:Key="ComboBoxHoverColorValue">DarkGreen</Color>
 
         <SolidColorBrush x:Key="ComboBox.Static.Background" Color="{DynamicResource ComboBoxBackgroundColor}"/>
         <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FFACACAC"/>
@@ -511,6 +508,6 @@
                 </GroupBox>
             </StackPanel>
         </RadioButton>
-        <Button Content="считать" Width="100" Click="Calc_Click" />
+        <Button Content="считать" Width="100" Click="Calc_Click" Style="{StaticResource ComputeButtonStyle}"  x:Name="computeButton" />
     </StackPanel>
 </Window>
