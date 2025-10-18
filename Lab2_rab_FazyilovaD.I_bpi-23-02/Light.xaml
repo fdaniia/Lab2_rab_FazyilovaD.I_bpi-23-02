@@ -84,6 +84,6 @@
     <Style TargetType="{x:Type Label}">
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         <Setter Property="Background" Value="Transparent"/>
-    </Style>
+    </Style> 
     
 </ResourceDictionary>

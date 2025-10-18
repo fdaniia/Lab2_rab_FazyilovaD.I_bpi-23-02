@@ -8,8 +8,8 @@
         Title="ответ:" Height="600" Width="500" WindowStartupLocation="CenterScreen" SizeToContent="Height" x:Name="mainWindow"
         MinHeight="650" MinWidth="400" xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Window.Resources>
-        <Color x:Key="ComboBoxBackgroundColorValue">PaleGreen</Color>
-        <Color x:Key="ComboBoxHoverColorValue">DarkGreen</Color>
+        <Color x:Key="ComboBoxBackgroundColor">PaleGreen</Color>
+        <Color x:Key="ComboBoxHoverColor">DarkGreen</Color>
 
         <SolidColorBrush x:Key="ComboBox.Static.Background" Color="{DynamicResource ComboBoxBackgroundColor}"/>
         <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FFACACAC"/>
@@ -57,9 +57,9 @@
             <Setter Property="Padding" Value="2"/>
         </Style>
         <Style x:Key="ComboBoxStyle1" TargetType="{x:Type ComboBox}">
-            <Setter Property="Background" Value="{StaticResource ComboBoxBackgroundColor}"/>
+            <Setter Property="Background" Value="{DynamicResource ComboBoxBackgroundColor}"/>
             <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="BorderBrush" Value="{StaticResource ComboBoxBackgroundColor}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxBackgroundColor}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="2"/>
         </Style>

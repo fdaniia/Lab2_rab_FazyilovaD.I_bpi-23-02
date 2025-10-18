@@ -25,6 +25,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         public MainWindow()
         {
             InitializeComponent();
+            this.Resources["ComboBoxBackgroundColor"] = Colors.PaleGreen;
+            this.Resources["ComboBoxHoverColor"] = Colors.DarkGreen;
             ApplyLightTheme();
         }
         private void Calc_Click(object sender, RoutedEventArgs e)
@@ -154,6 +156,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            this.Resources["ComboBoxBackgroundColor"] = isDarkTheme ? Colors.DarkBlue : Colors.PaleGreen;
+            this.Resources["ComboBoxHoverColor"] = isDarkTheme ? Colors.Indigo : Colors.DarkGreen;
             ThemeToggleButton.ClearValue(Button.BackgroundProperty);
             ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["LightButtonStyle"] as Style;
@@ -166,6 +170,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+            this.Resources["ComboBoxBackgroundColor"] = isDarkTheme ? Colors.DarkBlue : Colors.PaleGreen;
+            this.Resources["ComboBoxHoverColor"] = isDarkTheme ? Colors.Indigo : Colors.DarkGreen;
             ThemeToggleButton.ClearValue(Button.BackgroundProperty);
             ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["DarkButtonStyle"] as Style;
