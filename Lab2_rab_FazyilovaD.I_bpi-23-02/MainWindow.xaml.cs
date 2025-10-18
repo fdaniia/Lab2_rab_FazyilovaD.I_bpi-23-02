@@ -186,5 +186,10 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         {
             
         }
+
+        private void R1ComboF_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
