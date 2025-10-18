@@ -22,6 +22,10 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
     public partial class MainWindow : Window
     {
         private bool isDarkTheme = false;
+        private Color lightComboBoxColor = Colors.PaleGreen;
+        private Color darkComboBoxColor = Colors.DarkBlue;
+        private Color lightComboBoxHoverColor = Colors.DarkGreen;
+        private Color darkComboBoxHoverColor = Colors.Indigo;
         public MainWindow()
         {
             InitializeComponent();
@@ -156,8 +160,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-            this.Resources["ComboBoxBackgroundColor"] = isDarkTheme ? Colors.DarkBlue : Colors.PaleGreen;
-            this.Resources["ComboBoxHoverColor"] = isDarkTheme ? Colors.Indigo : Colors.DarkGreen;
+            this.Resources["ComboBoxBackgroundColor"] = lightComboBoxColor;
+            this.Resources["ComboBoxHoverColor"] = lightComboBoxHoverColor;
             ThemeToggleButton.ClearValue(Button.BackgroundProperty);
             ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["LightButtonStyle"] as Style;
@@ -170,8 +174,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
-            this.Resources["ComboBoxBackgroundColor"] = isDarkTheme ? Colors.DarkBlue : Colors.PaleGreen;
-            this.Resources["ComboBoxHoverColor"] = isDarkTheme ? Colors.Indigo : Colors.DarkGreen;
+            this.Resources["ComboBoxBackgroundColor"] = darkComboBoxColor;
+            this.Resources["ComboBoxHoverColor"] = darkComboBoxHoverColor;
             ThemeToggleButton.ClearValue(Button.BackgroundProperty);
             ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["DarkButtonStyle"] as Style;
