@@ -430,7 +430,7 @@
         </RadioButton>
         <RadioButton Margin="5" Name="Radio2" >
             <StackPanel >
-                <Image Height="23" Source="/Image/2.png" />
+                <Image Height="50" Source="/Image/2.png" />
                 <GroupBox Header="Parameters" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="a" />
@@ -451,7 +451,7 @@
         </RadioButton>
         <RadioButton Margin="5" Name="Radio3">
             <StackPanel >
-                <Image Source="/Image/3.png" Height="30" />
+                <Image Source="/Image/3.png" Height="50" />
                 <GroupBox Header="Parameters" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="a" />
@@ -477,7 +477,7 @@
         </RadioButton>
         <RadioButton Margin="5" Name="Radio4">
             <WrapPanel >
-                <Image Source="/Image/4.png" Height="60"/>
+                <Image Source="/Image/4.png" Height="50"/>
                 <GroupBox Header="Parameters" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="c" VerticalAlignment="Center"/>

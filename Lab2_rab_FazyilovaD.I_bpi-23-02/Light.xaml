@@ -7,17 +7,17 @@
     <Color x:Key="WindowBackgroundColor">#FFFFF8E1</Color>
     <Color x:Key="TextColor">#FF212121</Color>
 
-    <SolidColorBrush x:Key="ButtonBrush" Color="{StaticResource ButtonColor}"/>
-    <SolidColorBrush x:Key="ButtonHoverBrush" Color="{StaticResource ButtonHoverColor}"/>
-    <SolidColorBrush x:Key="ComboBoxBrush" Color="{StaticResource ComboBoxColor}"/>
-    <SolidColorBrush x:Key="ComboBoxHoverBrush" Color="{StaticResource ComboBoxHoverColor}"/>
-    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackgroundColor}"/>
-    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}"/>
+    <SolidColorBrush x:Key="ButtonBrush" Color="{DynamicResource ButtonColor}"/>
+    <SolidColorBrush x:Key="ButtonHoverBrush" Color="{DynamicResource ButtonHoverColor}"/>
+    <SolidColorBrush x:Key="ComboBoxBrush" Color="{DynamicResource ComboBoxColor}"/>
+    <SolidColorBrush x:Key="ComboBoxHoverBrush" Color="{DynamicResource ComboBoxHoverColor}"/>
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource WindowBackgroundColor}"/>
+    <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}"/>
 
     <Style x:Key="LightButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{StaticResource ButtonBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource ButtonBrush}"/>
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ButtonBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Padding" Value="10,5"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -39,8 +39,8 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource ButtonHoverBrush}"/>
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource ButtonHoverBrush}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ButtonHoverBrush}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource ButtonHoverBrush}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Background" TargetName="border" Value="#FFCC0000"/>
@@ -52,14 +52,14 @@
         </Setter>
     </Style>
     <Style x:Key="LightComboBoxStyle" TargetType="{x:Type ComboBox}">
-        <Setter Property="Background" Value="{StaticResource ComboBoxBrush}"/>
-        <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ComboBoxBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource ComboBoxBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource ComboBoxHoverBrush}"/>
-                <Setter Property="BorderBrush" Value="{StaticResource ComboBoxHoverBrush}"/>
+                <Setter Property="Background" Value="{DynamicResource ComboBoxHoverBrush}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxHoverBrush}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

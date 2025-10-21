@@ -156,7 +156,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         }
         private void ApplyLightTheme()
         {
-            var uri = new Uri("LightTheme.xaml", UriKind.Relative);
+            var uri = new Uri("Light.xaml", UriKind.Relative);
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
@@ -170,7 +170,7 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
         }
         private void ApplyDarkTheme()
         {
-            var uri = new Uri("DarkTheme.xaml", UriKind.Relative);
+            var uri = new Uri("Dark.xaml", UriKind.Relative);
             ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
