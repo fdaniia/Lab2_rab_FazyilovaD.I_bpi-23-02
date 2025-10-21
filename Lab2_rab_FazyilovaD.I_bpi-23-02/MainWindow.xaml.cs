@@ -162,9 +162,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             this.Resources["ComboBoxBackgroundColor"] = lightComboBoxColor;
             this.Resources["ComboBoxHoverColor"] = lightComboBoxHoverColor;
-            ThemeToggleButton.ClearValue(Button.BackgroundProperty);
-            ThemeToggleButton.ClearValue(Button.StyleProperty);
             ThemeToggleButton.Style = resourceDict["LightButtonStyle"] as Style;
+            computeButton.Style = resourceDict["LightButtonStyle"] as Style;
             this.Tag = "Light";
             ThemeToggleButton.Content = "темная тема";
         }
@@ -176,8 +175,8 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
             Application.Current.Resources.MergedDictionaries.Add(resourceDict);
             this.Resources["ComboBoxBackgroundColor"] = darkComboBoxColor;
             this.Resources["ComboBoxHoverColor"] = darkComboBoxHoverColor;
-            ThemeToggleButton.ClearValue(Button.BackgroundProperty);
-            ThemeToggleButton.ClearValue(Button.StyleProperty);
+            ThemeToggleButton.Style = resourceDict["DarkButtonStyle"] as Style;
+            computeButton.Style = resourceDict["DarkButtonStyle"] as Style;
             ThemeToggleButton.Style = resourceDict["DarkButtonStyle"] as Style;
             this.Tag = "Dark";
             ThemeToggleButton.Content = "светлая тема";
