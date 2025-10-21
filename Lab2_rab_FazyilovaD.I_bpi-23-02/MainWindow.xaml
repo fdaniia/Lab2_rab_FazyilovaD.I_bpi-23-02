@@ -415,7 +415,7 @@
                         <Label Content="a" Grid.Column="0" Grid.Row="0" />
                         <TextBox Style="{DynamicResource TextBoxStyle1}" Text="0,00" Grid.Column="1" Grid.Row="0" MinWidth="70" Name="R1TextA" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
                         <Label Content="f" Grid.Column="0" Grid.Row="1" />
-                        <ComboBox ItemContainerStyle="{StaticResource ComboBoxItemContainerStyle1}" Template="{StaticResource ComboBoxTemplate1}"
+                        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Template="{DynamicResource ComboBoxTemplate1}"
                                   Grid.Column="1" Grid.Row="1" Name="R1ComboF">
                             <ComboBoxItem>4</ComboBoxItem>
                             <ComboBoxItem>5</ComboBoxItem>
@@ -438,7 +438,7 @@
                         <Label Content="b" />
                         <TextBox Text="0,00" MinWidth="70" Name="R2TextB" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
                         <Label Content="f" />
-                        <ComboBox ItemContainerStyle="{StaticResource ComboBoxItemContainerStyle1}" Template="{StaticResource ComboBoxTemplate1}" 
+                        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Template="{DynamicResource ComboBoxTemplate1}" 
                                   MinWidth="100" Name="R2ComboF">
                             <ComboBoxItem>10</ComboBoxItem>
                             <ComboBoxItem>20</ComboBoxItem>
@@ -459,13 +459,13 @@
                         <Label Content="b" />
                         <TextBox Text="0,00" MinWidth="50" Name="R3TextB" PreviewTextInput="UniversalTextBox_PreviewCheck" DataObject.Pasting="UniversalTextBox_Pasting"/>
                         <Label Content="c" />
-                        <ComboBox ItemContainerStyle="{StaticResource ComboBoxItemContainerStyle1}" Template="{StaticResource ComboBoxTemplate1}" 
+                        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Template="{DynamicResource ComboBoxTemplate1}" 
                                   MinWidth="50" Name="R3ComboC">
                             <ComboBoxItem Content="0"/>
                             <ComboBoxItem Content="1"/>
                         </ComboBox>
                         <Label Content="d" />
-                        <ComboBox ItemContainerStyle="{StaticResource ComboBoxItemContainerStyle1}" Template="{StaticResource ComboBoxTemplate1}"
+                        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Template="{DynamicResource ComboBoxTemplate1}"
                                   MinWidth="70" Name="R3ComboD">
                             <ComboBoxItem Content="-1"/>
                             <ComboBoxItem Content="0"/>
@@ -481,7 +481,7 @@
                 <GroupBox Header="Parameters" >
                     <StackPanel Orientation="Horizontal">
                         <Label Content="c" VerticalAlignment="Center"/>
-                        <ComboBox ItemContainerStyle="{StaticResource ComboBoxItemContainerStyle1}" Template="{StaticResource ComboBoxTemplate1}"
+                        <ComboBox ItemContainerStyle="{DynamicResource ComboBoxItemContainerStyle1}" Template="{DynamicResource ComboBoxTemplate1}"
                                   MinWidth="70" VerticalAlignment="Center" Name="R4ComboC">
                             <ComboBoxItem Content="0"/>
                             <ComboBoxItem Content="1"/>
@@ -513,6 +513,6 @@
                 </GroupBox>
             </StackPanel>
         </RadioButton>
-        <Button Content="считать" Width="100" Click="Calc_Click" Style="{StaticResource ComputeButtonStyle}"  x:Name="computeButton" />
+        <Button Content="считать" Width="100" Click="Calc_Click" Style="{DynamicResource ComputeButtonStyle}"  x:Name="computeButton" />
     </StackPanel>
 </Window>
