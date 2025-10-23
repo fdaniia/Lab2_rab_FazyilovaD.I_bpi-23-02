@@ -194,7 +194,7 @@
                     <theme:SystemDropShadowChrome x:Name="shadow" Color="Transparent" 
                                                   MinWidth="{Binding ActualWidth, ElementName=templateRoot}" 
                                                   MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                        <Border x:Name="dropDownBorder" Background="{DynamicResource ComboBoxPopupBackgroundBrush}" 
+                        <Border x:Name="dropDownBorder" Background="{DynamicResource WindowBackgroundBrush}" 
                                 BorderBrush="{DynamicResource ComboBoxPopupBorderBrush}" BorderThickness="1">
                             <ScrollViewer x:Name="DropDownScrollViewer">
                                 <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
@@ -307,7 +307,7 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
         <Style x:Key="CustomComboBoxItemStyle" TargetType="{x:Type ComboBoxItem}">
-            <Setter Property="Background" Value="{DynamicResource ComboBoxItemBackgroundBrush}"/>
+            <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}"/>
             <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
