@@ -40,6 +40,11 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 double result = 0;
                 if (Radio1.IsChecked == true)
                 {
+                    if (string.IsNullOrWhiteSpace(R1TextA.Text) || R1ComboF.SelectedItem == null)
+                    {
+                        MessageBox.Show("введите все параметры для функции 1");
+                        return;
+                    }
                     var func = new Function1();
                     func.A = ParseDouble(R1TextA.Text);
                     func.F = ParseDouble(R1ComboF.Text);
@@ -47,6 +52,11 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 }
                 else if (Radio2.IsChecked == true)
                 {
+                    if (string.IsNullOrWhiteSpace(R2TextA.Text) || string.IsNullOrWhiteSpace(R2TextB.Text) || R2ComboF.SelectedItem == null)
+                    {
+                        MessageBox.Show("введите все параметры для функции 2");
+                        return;
+                    }
                     var func = new Function2();
                     func.A = ParseDouble(R2TextA.Text);
                     func.B = ParseDouble(R2TextB.Text);
@@ -55,6 +65,11 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 }
                 else if (Radio3.IsChecked == true)
                 {
+                    if (R3ComboC.SelectedItem == null || R3ComboD.SelectedItem == null)
+                    {
+                        MessageBox.Show("выберите все параметры для функции 3");
+                        return;
+                    }
                     var func = new Function3();
                     func.A = ParseDouble(R3TextA.Text);
                     func.B = ParseDouble(R3TextB.Text);
@@ -64,6 +79,11 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 }
                 else if (Radio4.IsChecked == true)
                 {
+                    if (R4ComboC.SelectedItem == null)
+                    {
+                        MessageBox.Show("выберите параметр C для функции 4");
+                        return;
+                    }
                     var func = new Function4();
                     func.A = ParseDouble(R4TextA.Text);
                     func.D = ParseInt(R4TextD.Text);
@@ -72,6 +92,11 @@ namespace Lab2_rab_FazyilovaD.I_bpi_23_02
                 }
                 else if (Radio5.IsChecked == true)
                 {
+                    if (string.IsNullOrWhiteSpace(R5TextX.Text) || string.IsNullOrWhiteSpace(R5TextY.Text) || string.IsNullOrWhiteSpace(R5TextN.Text) || string.IsNullOrWhiteSpace(R5TextK.Text))
+                    {
+                        MessageBox.Show("введите все параметры для функции 5");
+                        return;
+                    }
                     var func = new Function5();
                     func.X = ParseDouble(R5TextX.Text);
                     func.Y = ParseDouble(R5TextY.Text);
