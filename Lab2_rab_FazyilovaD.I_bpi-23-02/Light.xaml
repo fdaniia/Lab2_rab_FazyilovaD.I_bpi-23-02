@@ -163,5 +163,6 @@
     <Style TargetType="{x:Type WrapPanel}">
         <Setter Property="Background" Value="Transparent"/>
     </Style>
+    
 
 </ResourceDictionary>

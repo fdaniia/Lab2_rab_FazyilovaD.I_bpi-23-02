@@ -19,6 +19,7 @@
     <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="{DynamicResource TextBoxBackgroundColor}"/>
     <SolidColorBrush x:Key="TextBoxBorderBrush" Color="{DynamicResource TextBoxBorderColor}"/>
     <SolidColorBrush x:Key="RadioButtonBrush" Color="{DynamicResource RadioButtonColor}"/>
+    
 
     
     <Style x:Key="DarkButtonStyle" TargetType="{x:Type Button}">
@@ -163,5 +164,6 @@
     <Style TargetType="{x:Type WrapPanel}">
         <Setter Property="Background" Value="Transparent"/>
     </Style>
+    
 
 </ResourceDictionary>
